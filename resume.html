@@ -1,0 +1,341 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Resume</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<style>
+		/* Additional styling */
+		.icons.alt {
+			display: flex;
+			justify-content: center;
+			margin: 20px auto;
+		}
+	</style>
+	<title>Reusable PDF Viewer</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js"></script>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 0;
+			padding: 0;
+		}
+
+		#pdf-container {
+			position: relative;
+			width: 50%;
+			height: 600px;
+			margin: 20px auto;
+			border: 1px solid #ccc;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		canvas {
+			max-width: 100%;
+			max-height: auto;
+		}
+
+		.nav-button {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: hsl(24 23% 53%);
+			color: white;
+			border: none;
+			padding: 10px;
+			font-size: 18px;
+			cursor: pointer;
+			border-radius: 50%;
+		}
+
+		.nav-button:hover {
+			background-color: rgba(0, 0, 0, 0.7);
+		}
+
+		button[data-pdf] {
+			display: block;
+			margin: 20px auto;
+			padding: 10px 20px;
+			font-size: 16px;
+			color: #fff;
+			background-color: hsl(24 23% 53%);
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		button[data-pdf]:hover {
+			background-color: rgba(0, 0, 0, 0.7);
+		}
+
+		#prev-page {
+			left: 10px;
+		}
+
+		#next-page {
+			right: 10px;
+		}
+
+		#thumbnail-container {
+			margin: 10px auto 0;
+			display: flex;
+			justify-content: center;
+			gap: 10px;
+		}
+
+		.thumbnail {
+			width: 80px;
+			height: 100px;
+			border: 1px solid #ccc;
+		}
+
+		.thumbnail:hover {
+			transform: scale(1.1);
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+		}
+
+		.thumbnail.active {
+			border: 2px solid #007BFF;
+		}
+	</style>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo">Sofiat</a>
+		</header>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li><a href="index.html">About me</a></li>
+				<li><a href="projects.html">Project</a></li>
+				<li class="active"><a href="resume.html">Resume</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/sofiat-ajide-044496173/"
+						class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a>
+				</li>
+				<li><a href="https://github.com/sofiatajide" class="icon brands alt fa-github"><span
+							class="label">GitHub</span></a>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Post -->
+			<section id="post">
+				<ul class="actions special">
+					<button data-pdf="pdfs/resume.pdf">resume</button>
+				</ul>
+				<div id="pdf-container">
+					<canvas id="pdf-render"></canvas>
+					<button id="prev-page" class="nav-button">&lt;</button>
+					<button id="next-page" class="nav-button">&gt;</button>
+				</div>
+				<div id="thumbnail-container"></div>
+			</section>
+
+			<!-- Image -->
+			<section>
+				<h2>Certifications</h2>
+				<div class="box alt">
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-6"> <a href="https://coursera.org/share/58ec03acd5fbd21d7c0a5fbad14c987c"
+								class="image fit"><img src="images/IBM PM.jpg" alt="" /></a></div>
+						<div class="col-6"><a href="https://coursera.org/share/bcdad44312d9e111428e3e7ca70df4ee"
+								class="image fit"><img src="images/IBM AI PM.jpg" alt="" /></a>
+						</div>
+						<!-- Break -->
+						<div class="col-6"><a href="https://coursera.org/share/20a95edc0d1d42858eab469f3b6a59e0"
+								class="image fit"><img src="images/Google BA.jpg" alt="" /></a>
+						</div>
+						<div class="col-6"><a href="https://coursera.org/share/1c6c58447b3f9d85cbeed992a71e8554"
+								class="image fit"><img src="images/ML.jpg" alt="" /></a></div>
+						<!-- Break -->
+						<div class="col-6"><a href="https://coursera.org/share/3f5429694eee99aaa13f89048557a523"
+								class="image fit"><img src="images/IBM DS.jpg" alt="" /></a>
+						</div>
+						<div class="col-6"><a href="https://coursera.org/share/01fc7a3806488b3f82b47c12f73c0f32"
+								class="image fit"><img src="images/JHU DS.jpg" alt="" /></a>
+						</div>
+						<!-- Break -->
+						<div class="col-6"><a href="https://coursera.org/share/f4124ad68fb5f6ebd8b24c27f0caf624"
+								class="image fit"><img src="images/IBM DA.jpg" alt="" /></a>
+						</div>
+						<div class="col-6"><span class="image fit"><img src="images/DataScienceBootcamp.jpg"
+									alt="" /></span></div>
+						<!-- Break -->
+						<div class="col-6"><span class="image fit"><img src="images/BCG.jpg" alt="" /></span></div>
+						<div class="col-6"><span class="image fit"><img src="images/Accen.jpg" alt="" /></span></div>
+					</div>
+				</div>
+			</section>
+
+
+		</div>
+
+		<!-- Footer -->
+		</footer>
+		</section>
+		<ul class="icons alt">
+			<li><a href="https://www.linkedin.com/in/sofiat-ajide-044496173/" class="icon brands alt fa-linkedin"><span
+						class="label">linkedin</span></a></li>
+			<li><a href="https://github.com/sofiatajide" class="icon brands alt fa-github"><span
+						class="label">GitHub</span></a>
+			</li>
+		</ul>
+		</section>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script>
+		document.querySelectorAll('a[href^="http"]').forEach(link => {
+			if (!link.href.includes(window.location.hostname)) {
+				link.setAttribute('target', '_blank');
+				link.setAttribute('rel', 'noopener noreferrer');
+			}
+		});
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js"></script>
+	<script>
+		const pdfjsLib = window['pdfjs-dist/build/pdf'];
+		pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+
+		const pdfContainer = document.getElementById('pdf-container');
+		const canvas = document.getElementById('pdf-render');
+		const ctx = canvas.getContext('2d');
+		const prevPageBtn = document.getElementById('prev-page');
+		const nextPageBtn = document.getElementById('next-page');
+		const thumbnailContainer = document.getElementById('thumbnail-container');
+
+		let pdfDoc = null;
+		let currentPage = 1;
+
+		const renderPage = (pageNum) => {
+			pdfDoc.getPage(pageNum).then((page) => {
+				const viewport = page.getViewport({ scale: 1.5 });
+				canvas.height = viewport.height;
+				canvas.width = viewport.width;
+
+				const renderContext = {
+					canvasContext: ctx,
+					viewport: viewport,
+				};
+
+				page.render(renderContext);
+				updateThumbnails(pageNum);
+			});
+		};
+
+		const renderThumbnails = () => {
+			thumbnailContainer.innerHTML = '';
+			for (let i = 1; i <= pdfDoc.numPages; i++) {
+				const thumbnailCanvas = document.createElement('canvas');
+				thumbnailCanvas.classList.add('thumbnail');
+				thumbnailCanvas.dataset.page = i;
+				thumbnailContainer.appendChild(thumbnailCanvas);
+
+				pdfDoc.getPage(i).then((page) => {
+					const viewport = page.getViewport({ scale: 0.2 });
+					thumbnailCanvas.width = viewport.width;
+					thumbnailCanvas.height = viewport.height;
+
+					const renderContext = {
+						canvasContext: thumbnailCanvas.getContext('2d'),
+						viewport: viewport,
+					};
+
+					page.render(renderContext);
+				});
+			}
+		};
+
+		const updateThumbnails = (pageNum) => {
+			document.querySelectorAll('.thumbnail').forEach((thumbnail) => {
+				thumbnail.classList.remove('active');
+				if (parseInt(thumbnail.dataset.page) === pageNum) {
+					thumbnail.classList.add('active');
+				}
+			});
+		};
+
+		const loadPdf = (pdfUrl) => {
+			pdfjsLib.getDocument(pdfUrl).promise.then((doc) => {
+				pdfDoc = doc;
+				renderPage(currentPage);
+				renderThumbnails();
+
+				prevPageBtn.addEventListener('click', () => {
+					if (currentPage > 1) {
+						currentPage--;
+						renderPage(currentPage);
+					}
+				});
+
+				nextPageBtn.addEventListener('click', () => {
+					if (currentPage < pdfDoc.numPages) {
+						currentPage++;
+						renderPage(currentPage);
+					}
+				});
+
+				thumbnailContainer.addEventListener('click', (e) => {
+					if (e.target.classList.contains('thumbnail')) {
+						currentPage = parseInt(e.target.dataset.page);
+						renderPage(currentPage);
+					}
+
+				});
+			});
+		};
+		loadPdf('pdfs/resume.pdf');
+		document.querySelector('button[data-pdf]').addEventListener('click', function () {
+			const link = document.createElement('a');
+			link.href = this.getAttribute('data-pdf');
+			link.download = 'resume.pdf';
+			link.click();
+		});
+	</script>
+
+
+</body>
+
+</html>
