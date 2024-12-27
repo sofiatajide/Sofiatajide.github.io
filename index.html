@@ -14,17 +14,69 @@
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
+	<style>
+		/* Additional styling */
+		#nav {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			padding: 10px;
+		}
+
+		#intro {
+			text-align: center;
+		}
+
+		#intro img {
+			display: inline-block;
+			width: 250px;
+			height: 250px;
+			border-radius: 50%;
+			background-color: lightgrey;
+			/* Light grey background */
+			overflow: hidden;
+			margin-top: 10px;
+		}
+
+		#intro h2 {
+			margin-top: 30px;
+		}
+
+		.education-box {
+			background-color: hsl(24 23% 53%);
+			padding: 20px;
+			border-radius: 12px;
+			margin: 20px auto;
+			max-width: 1000px;
+		}
+
+		.career-columns {
+			display: flex;
+			justify-content: center;
+			align-items: top;
+			text-align: justify;
+			gap: 40px;
+			margin: 0 auto;
+			max-width: 1000px;
+			flex: 1;
+			font-size: 18px
+		}
+
+		.career-columns div {
+			flex: 1;
+			padding: 20px;
+			background-color: #f9f9f9;
+			border-radius: 8px;
+		}
+
+		.icons.alt {
+			display: flex;
+			justify-content: center;
+			gap: 15px;
+			margin: 20px auto;
+		}
+	</style>
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T9RP42BXSZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-T9RP42BXSZ');
-</script>
 
 <body class="is-preload">
 
@@ -33,12 +85,12 @@
 
 		<!-- Intro -->
 		<div id="intro">
-			<h1>Sofiat Ajide<br />
-				Portfolio</h1>
-			<p>Welcome to my portfolio, showcasing my experience in data analysis and technology management using SQL,
-				Tableau, Power BI, Excel and Python.
-				<a href="https://www.linkedin.com/in/sofiat-ajide-044496173/">@sofiat</a>
-			</p>
+			<h2>About Me</h2>
+			<img src="images/sofiat.jpg" alt="Sofiat Picture" />
+			<h2 style="text-transform: none;">Hi! I’m Sofiat</h2>
+			<p>I’m a product manager, data analyst, problem-solver, and so much more. <br /> I’m passionate about
+				leveraging
+				technology and data to create impactful solutions.</p>
 			<ul class="actions">
 				<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 			</ul>
@@ -52,239 +104,105 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="links">
-				<li class="active"><a href="index.html">Projects</a></li>
-
+				<li class="active"><a href="index.html">About Me</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="elements.html">Resume</a></li>
+				<li><a href="contact.html">Contact</a></li>
 			</ul>
 			<ul class="icons">
-
 				<li><a href="https://www.linkedin.com/in/sofiat-ajide-044496173/"
 						class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a>
 				</li>
 				<li><a href="https://github.com/sofiatajide" class="icon brands alt fa-github"><span
 							class="label">GitHub</span></a>
-				</li>
 			</ul>
 		</nav>
 
 		<!-- Main -->
 		<div id="main">
 
-			<!-- Featured Post -->
-			<article class="post featured">
-				<header class="major">
-					<h2><a
-							href="https://github.com/sofiatajide/PortfolioProjects/blob/main/Data%20Cleaning%20Queries.sql">DATA
-							CLEANING<br />
-							IN SQL</a></h2>
-					<p>The main objective of this project is to improve the accessibility and utility of housing data
-						that is in its raw form. By leveraging the capabilities of SQL Server, I aim to transform this
-						data into a more structured and organized format that is easier for analysis. This
-						process involved data cleaning, aggregation, and other necessary transformations to ensure that
-						the data is reliable and accurate.
-				</header>
-				<a href="https://github.com/sofiatajide/PortfolioProjects/blob/main/Data%20Cleaning%20Queries.sql"
-					class="image main"><img src="images/housing.jpg" alt="" /></a>
+			<!-- Post -->
+			<section class="post">
+				<div class="education-box">
+					<h2 style="text-align:center">Education</h2>
+					<p style="color: white; font-weight: bold; font-size: 20px;">I’ve always been
+						fascinated by
+						technology, innovation,
+						and
+						problem-solving. This curiosity led me
+						to study Civil Engineering at the University of Ilorin and Management of Technology at New York
+						University. My
+						drive for growth, curiosity, and passion for self-improvement ensure that my learning journey is
+						never-ending.</p>
+				</div>
+
+				<h2 style="text-align:center">Career</h2>
+				<div class="career-columns">
+					<p>I’ve always been driven by a passion for technology, data, and
+						problem-solving, which has shaped
+						my diverse and impactful career journey. Beginning with a foundation in Civil Engineering, I
+						cultivated
+						strong analytical and project management skills that have since evolved into expertise in
+						product
+						management, data analysis, and operations research. <br />
+						My professional experience includes roles as a Product Manager at Yuvoice and Hack for LA, where
+						I refined user stories, designed dashboards, and implemented innovative solutions to streamline
+						processes and enhance
+						user experiences. At LOCOMeX, as a Product Manager Intern, I led cross-functional teams and
+						drove
+						project efficiency
+						through agile practices.
+					</p>
+					<p>Earlier in my career, I honed my communication, leadership, and
+						organizational skills as a
+						Lecturer, guiding students through complex concepts, managing projects, and conducting
+						research to improve engineering practices. As a Graduate Assistant at NYU, I enhanced my
+						attention to detail, data
+						management, and process optimization by auditing applications and ensuring accuracy in
+						high-volume, fast-paced
+						environments. <br />
+						My career is guided by a commitment to continuous learning and growth. Today, I’m focused on
+						leveraging my skills in technology and data to deliver impactful solutions and drive meaningful
+						change. My ultimate goal
+						is to collaborate with innovative teams, solve complex challenges, and lead initiatives that
+						create lasting impact.
+					</p>
+				</div>
+
 				<ul class="actions special">
-					<li><a href="https://github.com/sofiatajide/PortfolioProjects/blob/main/Data%20Cleaning%20Queries.sql"
-							class="button large">VIEW PROJECT</a></li>
+					<a href="projects.html" class="button large">
+						See Projects
+					</a>
 				</ul>
-			</article>
 
-			<!-- Posts -->
-			<section class="posts">
-				<article>
-					<header>
-						<h2><a
-								href="https://github.com/sofiatajide/PortfolioProjects/blob/main/Covid%20Cases%20Data%20Exploration.sql">DATA
-								EXPLORATION<br />
-								IN SQL</a></h2>
-					</header>
-					<a href="https://github.com/sofiatajide/PortfolioProjects/blob/main/Covid%20Cases%20Data%20Exploration.sql"
-						class="image fit"><img src="images/covid.jpg" alt="" /></a>
-					<p>This project analyzes global COVID-19 data using SQL Server. The aim is to gain a
-						deeper understanding of
-						the spread and impact of the virus across different countries and regions. By leveraging the
-						capabilities of SQL Server,
-						I explored and manipulated the data to extract meaningful insights and identify trends.</p>
-					<ul class="actions special">
-						<li><a href="https://github.com/sofiatajide/PortfolioProjects/blob/main/Covid%20Cases%20Data%20Exploration.sql"
-								class="button">VIEW PROJECT</a></li>
-					</ul>
-				</article>
-				<article>
-					<header>
-						<h2><a href="https://github.com/sofiatajide/PortfolioProjects/blob/main/Lung_Cancer.sql">
-							LUNG CANCER DATA ANALYSIS & INSIGHTS<br />
-							USING PYTHON & SQL</a></h2>
-					</header>
-					<a href="https://github.com/sofiatajide/PortfolioProjects/blob/main/Lung_Cancer.sql"
-						class="image fit"><img src="images/cancer.jpg" alt="" /></a>
-					<p>This project revolves around a comprehensive analysis of lung cancer data with a focus on
-						extracting valuable insights
-						to inform decisions. Leveraging the power of Python, Pandas, and SQL, I meticulously cleaned,
-						preprocessed,
-						and scrutinized a sizable dataset of sample/dummy lung cancer cases. Employing statistical
-						techniques and data
-						visualization, I uncovered pivotal correlations and trends within the data.</p>
-					<ul class="actions special">
-						<li><a href="https://github.com/sofiatajide/PortfolioProjects/blob/main/Lung_Cancer.py"
-								class="button">VIEW PROJECT</a></li>
-					</ul>
-				</article>
-				<article>
-					<header>
-						<h2><a
-								href="https://public.tableau.com/app/profile/sofiat1513/viz/AirBnBFullProject_16789848700460/Dashboard1">TABLEAU
-								project<br />
-							</a></h2>
-					</header>
-					<a href="https://public.tableau.com/app/profile/sofiat1513/viz/AirBnBFullProject_16789848700460/Dashboard1"
-						class="image fit"><img src="images/tableau.jpg" alt="" /></a>
-					<p>The purpose of this project is to utilize Tableau to create visualizations that provide insights
-						into Airbnb pricing. By
-						analyzing Airbnb data, I aim to gain a better understanding of the factors that influence
-						pricing, such as location,
-						property type, and time of year. I created an interactive charts and graphs that enable me to
-						explore and analyze the
-						data in a more intuitive and accessible manner. The resulting insights can be used to make more
-						informed decisions when
-						it comes to booking an Airbnb, as well as informing pricing strategies for Airbnb hosts.</p>
-					<ul class="actions special">
-						<li><a href="https://public.tableau.com/app/profile/sofiat1513/viz/AirBnBFullProject_16789848700460/Dashboard1"
-								class="button">VIEW PROJECT</a></li>
-					</ul>
-				</article>
-				<article>
-					<header>
-						<h2><a
-								href="https://github.com/sofiatajide/PortfolioProjects/blob/main/Power%20BI%20Project.pbix">power
-								bi<br />
-								project</a></h2>
-					</header>
-					<a href="https://github.com/sofiatajide/PortfolioProjects/blob/main/Power%20BI%20Project.pbix"
-						class="image fit"><img src="images/Power Bi.png" alt="" /></a>
-					<p>Using Power BI, I created a dashboard that provides insights into a survey with respondent data.
-						The dashboard includes visualizations that allow the user to analyze the data easily and
-						identify trends and patterns.
-					</p>
-					<ul class="actions special">
-						<li><a href="https://github.com/sofiatajide/PortfolioProjects/blob/main/Power%20BI%20Project.pbix"
-								class="button">View Project</a></li>
-					</ul>
-				</article>
-				<article>
-					<header>
-						<h2><a href="https://github.com/sofiatajide/PortfolioProjects/blob/main/Excel%20Project.xlsx">excel
-								project<br />
-							</a></h2>
-					</header>
-					<a href="https://github.com/sofiatajide/PortfolioProjects/blob/main/Excel%20Project.xlsx"
-						class="image fit"><img src="images/New Excel.png" alt="" /></a>
-					<p>For this project, I used Microsoft Excel to clean and organize the survey data. This involved
-						removing any duplicate or irrelevant data points, as well as correcting any errors or
-						inconsistencies in the data. Once the data was cleaned and organized, I used Excel's PivotTable
-						functionality to create a dashboard that visualizes the key insights from the data.</p>
-					<ul class="actions special">
-						<li><a href="https://github.com/sofiatajide/PortfolioProjects/blob/main/Excel%20Project.xlsx"
-								class="button">view project</a></li>
-					</ul>
-				</article>
-				<article>
-					<header>
-						<h2><a
-								href="https://github.com/sofiatajide/PortfolioProjects/blob/main/Analyzing%20Seasonal%20Trends%20in%20Bike%20Rentals%20and%20Predicting%20Future%20Rentals.ipynb">Analyzing
-								Seasonal Trends in Bike Rentals and Predicting Future Rentals using Python<br />
-							</a></h2>
-					</header>
-					<a href="https://github.com/sofiatajide/PortfolioProjects/blob/main/Analyzing%20Seasonal%20Trends%20in%20Bike%20Rentals%20and%20Predicting%20Future%20Rentals.ipynb"
-						class="image fit"><img src="images/seasonal.png" alt="" /></a>
-					<p>This project utilized Python to analyze the impact of seasonality on bike rentals using the Bike
-						Sharing Dataset. The project involved data cleaning, exploration, and visualization to gain
-						insights into the patterns of bike rentals
-						over different seasons. The analysis revealed that bike rentals tend to increase during the summer
-						and fall months, and
-						decrease during winter and spring months. The project provided valuable insights into the
-						seasonal trends of bike
-						rentals and can be useful for bike rental businesses to plan their operations accordingly.
-						Additionally, a machine-learning model was built to predict the number of bike rentals
-						based on various features such as season, temperature, humidity, wind speed and weather
-						conditions.</p>
-					<ul class="actions special">
-						<li><a href="https://github.com/sofiatajide/PortfolioProjects/blob/main/Analyzing%20Seasonal%20Trends%20in%20Bike%20Rentals%20and%20Predicting%20Future%20Rentals.ipynb"
-								class="button">view project</a></li>
-					</ul>
-				</article>
-				<article>
-					<header>
-						<h2><a
-								href="https://github.com/sofiatajide/PortfolioProjects/blob/main/Automatic%20File%20Sorter.ipynb">Automatic
-								file sorter<br />
-								with python</a></h2>
-					</header>
-					<a href="https://github.com/sofiatajide/PortfolioProjects/blob/main/Automatic%20File%20Sorter.ipynb"
-						class="image fit"><img src="images/File sorter.jpeg" alt="" /></a>
-					<p>In this project, I created a file sorter using Python</p>
-					<ul class="actions special">
-						<li><a href="https://github.com/sofiatajide/PortfolioProjects/blob/main/Automatic%20File%20Sorter.ipynb"
-								class="button">view project</a></li>
-					</ul>
-				</article>
-				<article>
-					<header>
-						<h2><a href="https://github.com/sofiatajide/PortfolioProjects/blob/main/BMI%20Calculator.ipynb">BMI
-								Calculator<br />
-								with python</a></h2>
-					</header>
-					<a href="https://github.com/sofiatajide/PortfolioProjects/blob/main/BMI%20Calculator.ipynb"
-						class="image fit"><img src="images/Bmi calculator.png" alt="" /></a>
-					<p>In this project, I created a Body Mass Index (BMI) calculator using Python. The program takes
-						user inputs for weight and height, and
-						calculates the BMI. The program also provides a brief interpretation of the BMI result.</p>
-					<ul class="actions special">
-						<li><a href="https://github.com/sofiatajide/PortfolioProjects/blob/main/BMI%20Calculator.ipynb"
-								class="button">view project</a></li>
-					</ul>
-				</article>
 			</section>
-
-
-
-			<!-- Footer -->
-
-			<section class="split contact">
-				<section class="alt">
-					<h3>location</h3>
-					<p>New York City, NY 11209<br />
-					</p>
-				</section>
-
-				<section>
-					<h3>Email</h3>
-					<p><a href="#">sofiatajide@gmail.com</a></p>
-				</section>
-				<section>
-					<h3>Social</h3>
-					<ul class="icons alt">
-						</li>
-						<li><a href="https://www.linkedin.com/in/sofiat-ajide-044496173/"
-								class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a>
-						</li>
-						<li><a href="https://github.com/sofiatajide" class="icon brands alt fa-github"><span
-									class="label">GitHub</span></a></li>
-					</ul>
-				</section>
-			</section>
-			</footer>
-
-			<!-- Copyright -->
-			<div id="copyright">
-				<ul>
-					<li>&copy; Untitled</li>
-					<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</div>
 
 		</div>
+		<p><br /></p>
+		<div class="sqs-html-content">
+			<h1 style="color: white;text-align:center;text-transform: none;">&nbsp;Get in touch.</h1>
+		</div>
+
+		<div id="header">
+			<a href="contact.html" class="logo">
+				Contact Me </a>
+		</div>
+
+
+		<!-- Footer -->
+		</footer>
+		</section>
+		<ul class="icons alt">
+			<li><a href="https://www.linkedin.com/in/sofiat-ajide-044496173/" class="icon brands alt fa-linkedin"><span
+						class="label">linkedin</span></a>
+			</li>
+			<li><a href="https://github.com/sofiatajide" class="icon brands alt fa-github"><span
+						class="label">GitHub</span></a>
+			</li>
+		</ul>
+		</section>
+		</footer>
+
 
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
@@ -294,6 +212,14 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+			document.querySelectorAll('a[href^="http"]').forEach(link => {
+				if (!link.href.includes(window.location.hostname)) {
+					link.setAttribute('target', '_blank');
+					link.setAttribute('rel', 'noopener noreferrer');
+				}
+			});
+		</script>
 
 </body>
 
