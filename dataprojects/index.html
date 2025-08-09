@@ -33,6 +33,22 @@
 			justify-content: center;
 			margin: 20px auto;
 		}
+
+		.responsive-iframe {
+			position: relative;
+			width: 100%;
+			padding-top: 59.27%;
+			/* 569 / 960 = 0.5927 for 16:9 aspect ratio */
+		}
+
+		.responsive-iframe iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: 0;
+		}
 	</style>
 </head>
 
@@ -82,13 +98,11 @@
 					<h2 style="font-size: xx-large;text-align:center;text-transform: none;"><a
 							href=" https://docs.google.com/presentation/d/1NW9Gm_K9qmz_xbHRer9bGrBbrbimDFNpQM9ci6iyMq4/edit?usp=drive_link">
 							Winning Space Race</a></h2>
-
 				</header>
-				<div>
+				<div class="responsive-iframe">
 					<iframe
 						src="https://docs.google.com/presentation/d/e/2PACX-1vQinSMbhY7SRFoUsTCJ-pFCaIgdZhnSwySShXL6rGiAKDTIKD_vboSbQH-qV0VB0kbozg8loRe2QIx3/embed?start=false&loop=false&delayms=3000"
-						frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true"
-						webkitallowfullscreen="true"></iframe>
+						frameborder="0" allowfullscreen></iframe>
 				</div>
 				<p></br></p>
 				<ul class="actions special">
@@ -101,17 +115,17 @@
 					<h2 style="font-size: xx-large;text-align:center;text-transform: none;"><a
 							href="https://docs.google.com/presentation/d/13vaEfluKn8ljKCv0qoDugM0najGLTgZO7Tf1HZKwMSY/edit?usp=sharing">
 							Trends in Technology</a></h2>
-					<div>
-						<iframe
-							src="https://docs.google.com/presentation/d/e/2PACX-1vSzf1gozGTziOTmcLqczyEwWALuhVfs5aRTu-3swBqkDX4X7-xD7K0zxlg9QfbWCwTdSGiDGc7VEf3_/embed?start=false&loop=false&delayms=3000"
-							frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true"
-							webkitallowfullscreen="true"></iframe>
-					</div>
-					<p></br></p>
-					<ul class="actions special">
-						<li><a href="https://github.com/sofiatajide/IBM-data-Analyst-Capstone-Project"
-								class="button large">Full Projects Here</a></li>
-					</ul>
+				</header>
+				<div class="responsive-iframe">
+					<iframe
+						src="https://docs.google.com/presentation/d/e/2PACX-1vSzf1gozGTziOTmcLqczyEwWALuhVfs5aRTu-3swBqkDX4X7-xD7K0zxlg9QfbWCwTdSGiDGc7VEf3_/embed?start=false&loop=false&delayms=3000"
+						frameborder="0" allowfullscreen></iframe>
+				</div>
+				<p></br></p>
+				<ul class="actions special">
+					<li><a href="https://github.com/sofiatajide/IBM-data-Analyst-Capstone-Project"
+							class="button large">Full Projects Here</a></li>
+				</ul>
 			</article>
 
 			<!-- Posts -->
