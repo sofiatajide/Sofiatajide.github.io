@@ -1,12 +1,9 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 
 <head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-T9RP42BXSZ"></script>
 	<script>
@@ -19,9 +16,9 @@
 	<title>Data Projects</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
 	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
+		<link rel="stylesheet" href="../assets/css/noscript.css" />
 	</noscript>
 	</noscript>
 	<style>
@@ -113,25 +110,28 @@
 
 		<!-- Header -->
 		<header id="header">
-			<a href="index.html" class="logo">Sofiat</a>
+			<a href="/" class="logo">Sofiat</a>
 		</header>
 
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="links">
-				<li><a href="index.html"> About Me </a></li>
-				<li><a href="projects.html">Projects</a></li>
-				<li><a href="resume.html">Resume</a></li>
-				<li><a href="blog.html">Blog</a></li>
+				<li><a href="/"> About Me </a></li>
+				<li><a href="/projects/">Projects</a></li>
+				<li><a href="/resume/">Resume</a></li>
+				<li><a href="/blog/">Blog</a></li>
 				<li><a href="/contact/">Contact</a></li>
 			</ul>
 			<ul class="links">
-				<li class="active"><a href="productprojects.html">Product Projects</a></li>
-				<li><a href="dataprojects.html">Data Projects</a></li>
+				<li class="active"><a href="/productprojects/">Product Projects</a></li>
+				<li><a href="/dataprojects/">Data Projects</a></li>
 			</ul>
 			<ul class="icons">
-				<li><a href="https://www.linkedin.com/in/sofiat-ajide-044496173/"
-						class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a>
+				<li><a href="mailto:ajidesofiat@gmail.com" class="icon solid fa-envelope"><span
+							class="label">Mail</span></a>
+				</li>
+				<li><a href="https://www.linkedin.com/in/sofiat-ajide/" class="icon brands alt fa-linkedin"><span
+							class="label">linkedin</span></a>
 				</li>
 				<li><a href="https://github.com/sofiatajide" class="icon brands alt fa-github"><span
 							class="label">GitHub</span></a>
@@ -210,8 +210,11 @@
 		<footer>
 			<section>
 				<ul class="icons alt">
-					<li><a href="https://www.linkedin.com/in/sofiat-ajide-044496173/"
-							class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
+					<li><a href="mailto:ajidesofiat@gmail.com" class="icon solid fa-envelope"><span
+								class="label">Mail</span></a>
+					</li>
+					<li><a href="https://www.linkedin.com/in/sofiat-ajide/" class="icon brands alt fa-linkedin"><span
+								class="label">linkedin</span></a></li>
 					<li><a href="https://github.com/sofiatajide" class="icon brands alt fa-github"><span
 								class="label">GitHub</span></a>
 					</li>
@@ -222,13 +225,13 @@
 	</div>
 
 	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
 	<script>
 		document.querySelectorAll('a[href^="http"]').forEach(link => {
 			if (!link.href.includes(window.location.hostname)) {
@@ -317,8 +320,8 @@
 		}
 
 		// Initialize viewers for multiple PDFs
-		new PDFViewer('pdf-viewer-1', 'pdfs/Perfect Purifier.pdf');
-		new PDFViewer('pdf-viewer-2', 'pdfs/MLIW.pdf');
+		new PDFViewer('pdf-viewer-1', '../pdfs/Perfect Purifier.pdf');
+		new PDFViewer('pdf-viewer-2', '../pdfs/MLIW.pdf');
 	</script>
 
 </body>

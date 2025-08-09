@@ -3,6 +3,7 @@
 <html>
 
 <head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-T9RP42BXSZ"></script>
 	<script>
@@ -12,7 +13,7 @@
 
 		gtag('config', 'G-T9RP42BXSZ');
 	</script>
-	<title>Project Page</title>
+	<title>Contact</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="../assets/css/main.css" />
@@ -53,6 +54,129 @@
 			justify-content: center;
 			margin: 20px auto;
 		}
+
+		.contact-section {
+			background-color: #f9f9f9;
+			padding: 60px 20px;
+			text-align: center;
+			border-top: 1px solid #ddd;
+			font-family: 'Segoe UI', sans-serif;
+		}
+
+		.contact-section h2 {
+			font-size: 2em;
+			margin-bottom: 10px;
+		}
+
+		.contact-section p {
+			font-size: 1.1em;
+			margin-bottom: 30px;
+			color: #555;
+		}
+
+		.contact-buttons {
+			display: flex;
+			justify-content: center;
+			/* centers horizontally */
+			gap: 16px;
+			margin-top: 20px;
+		}
+
+		.contact-button {
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+			padding: 14px 24px;
+			font-size: 1em;
+			font-weight: 600;
+			text-decoration: none;
+			border-radius: 8px;
+			transition: background-color 0.3s ease, transform 0.2s ease;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			color: white;
+			/* ensures white text */
+		}
+
+		.contact-button.email {
+			background-color: #333;
+		}
+
+		.contact-button.linkedin {
+			background-color: #0a66c2;
+			color: white;
+			/* override any inherited styles */
+		}
+
+
+		.contact-button.linkedin {
+			background-color: #0a66c2;
+			color: white !important;
+			/* override any inherited or conflicting styles */
+		}
+
+		.contact-button.linkedin i {
+			color: white !important;
+		}
+
+		.contact-button.linkedin span,
+		.contact-button.linkedin strong,
+		.contact-button.linkedin em {
+			color: white !important;
+		}
+
+		.contact-button.linkedin:hover {
+			background-color: #084b9c;
+			/* darker LinkedIn blue for hover */
+			color: white !important;
+			/* force white text */
+			animation: pulse 0.8s ease-in-out;
+		}
+
+		.contact-button.linkedin:hover i {
+			color: white !important;
+			/* force white icon */
+		}
+
+		.contact-button {
+			transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+		}
+
+		.contact-button:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+		}
+
+		.contact-button i {
+			font-size: 1.2em;
+		}
+
+		@media (max-width: 600px) {
+			.contact-buttons {
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+
+		@keyframes pulse {
+			0% {
+				transform: scale(1);
+				box-shadow: 0 0 0 rgba(255, 255, 255, 0.4);
+			}
+
+			50% {
+				transform: scale(1.05);
+				box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+			}
+
+			100% {
+				transform: scale(1);
+				box-shadow: 0 0 0 rgba(255, 255, 255, 0.4);
+			}
+		}
+
+		.contact-button.linkedin {
+			animation: pulse 2.5s infinite;
+		}
 	</style>
 </head>
 
@@ -63,21 +187,24 @@
 
 		<!-- Header -->
 		<header id="header">
-			<a href="index.html" class="logo">Sofiat</a>
+			<a href="/" class="logo">Sofiat</a>
 		</header>
 
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="links">
-				<li><a href="index.html"> About Me </a></li>
-				<li><a href="projects.html">Projects</a></li>
-				<li><a href="resume.html">Resume</a></li>
-				<li><a href="blog.html">Blog</a></li>
+				<li><a href="/"> About Me </a></li>
+				<li><a href="../projects/">Projects</a></li>
+				<li><a href="../resume/">Resume</a></li>
+				<li><a href="../blog/">Blog</a></li>
 				<li class="active"><a href="/contact/">Contact</a></li>
 			</ul>
 			<ul class="icons">
-				<li><a href="https://www.linkedin.com/in/sofiat-ajide-044496173/"
-						class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a>
+				<li><a href="mailto:ajidesofiat@gmail.com" class="icon solid fa-envelope"><span
+							class="label">Mail</span></a>
+				</li>
+				<li><a href="https://www.linkedin.com/in/sofiat-ajide/" class="icon brands alt fa-linkedin"><span
+							class="label">linkedin</span></a>
 				</li>
 				<li><a href="https://github.com/sofiatajide" class="icon brands alt fa-github"><span
 							class="label">GitHub</span></a>
@@ -89,15 +216,27 @@
 		<div id="main">
 
 			<!-- Post -->
-			<section class="post">
+			<section class="contact-section">
 				<div id="connect-with-me">
 					<div id="connect-with-me">
 						<h2 style="text-transform: none;">Want to connect?</h2>
-						<p style="text-align: center;">Feel free to contact me via email or LinkedIn. Cheers!</p>
-						<h2 style="text-transform: none;"><a href="mailto:ajidesofiat@gmail.com">Email</a> </br>
-							</br>
-							<a href="https://www.linkedin.com/in/sofiat-ajide-044496173/" target="_blank">LinkedIn</a>
-						</h2>
+						<p style="text-align: center;">
+							Feel free to contact me via
+							<a href="mailto:ajidesofiat@gmail.com">Email</a> or
+							<a href="https://www.linkedin.com/in/sofiat-ajide/" target="_blank"
+								rel="noopener noreferrer">LinkedIn</a>.
+							Cheers!
+						</p>
+
+						<div class="contact-buttons">
+							<a href="mailto:ajidesofiat@gmail.com" class="contact-button email">
+								<i class="fas fa-envelope"></i> Email
+							</a>
+							<a href="https://www.linkedin.com/in/sofiat-ajide-044496173/"
+								class="contact-button linkedin" target="_blank" rel="noopener noreferrer">
+								<i class="fab fa-linkedin"></i> LinkedIn
+							</a>
+						</div>
 
 					</div>
 
@@ -108,18 +247,19 @@
 		</div>
 
 		<!-- Footer -->
-		</footer>
-		</section>
-		<ul class="icons alt">
-			<li><a href="https://www.linkedin.com/in/sofiat-ajide-044496173/" class="icon brands alt fa-linkedin"><span
-						class="label">linkedin</span></a></li>
-			<li><a href="https://github.com/sofiatajide" class="icon brands alt fa-github"><span
-						class="label">GitHub</span></a>
-			</li>
-			<li><a href="ajidesofiat@gmail.com" class="icon brands alt fa-mail"><span class="label">Mail</span></a>
-			</li>
-		</ul>
-		</section>
+		<footer>
+			</section>
+			<ul class="icons alt">
+				<li><a href="mailto:ajidesofiat@gmail.com" class="icon solid fa-envelope"><span
+							class="label">Mail</span></a>
+				</li>
+				<li><a href="https://www.linkedin.com/in/sofiat-ajide/" class="icon brands alt fa-linkedin"><span
+							class="label">linkedin</span></a></li>
+				<li><a href="https://github.com/sofiatajide" class="icon brands alt fa-github"><span
+							class="label">GitHub</span></a>
+				</li>
+			</ul>
+			</section>
 		</footer>
 
 	</div>
