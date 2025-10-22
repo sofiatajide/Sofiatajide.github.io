@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
@@ -8,7 +9,6 @@ import Resume from './components/Resume';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
 import WorkExperience from './components/WorkExperience';
-import { Section } from './types';
 
 const PageWrapper: React.FC<{ children: React.ReactNode, isSurface?: boolean }> = ({ children, isSurface }) => {
   const bgColor = isSurface ? 'bg-surface' : 'bg-background';
@@ -22,37 +22,24 @@ const PageWrapper: React.FC<{ children: React.ReactNode, isSurface?: boolean }> 
 };
 
 const App: React.FC = () => {
-  const [activeSection, setActiveSection] = useState<Section>('Home');
-
-  const renderSection = () => {
-    switch (activeSection) {
-      case 'Home':
-        return <Home onNavigate={setActiveSection} />;
-      case 'About':
-        return <PageWrapper><About /></PageWrapper>;
-      case 'Projects':
-        return <PageWrapper isSurface><Projects /></PageWrapper>;
-      case 'Work Experience':
-        return <PageWrapper><WorkExperience /></PageWrapper>;
-      case 'Resume':
-        return <PageWrapper><Resume /></PageWrapper>;
-      case 'Blog':
-        return <PageWrapper isSurface><Blog /></PageWrapper>;
-      case 'Contact':
-        return <PageWrapper><Contact /></PageWrapper>;
-      default:
-        return <Home onNavigate={setActiveSection} />;
-    }
-  };
-
   return (
-    <div className="flex flex-col min-h-screen font-sans">
-      <Header activeSection={activeSection} setActiveSection={setActiveSection} />
-      <main className="flex-grow">
-        {renderSection()}
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="flex flex-col min-h-screen font-sans">
+        <Header />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
+            <Route path="/projects" element={<PageWrapper isSurface><Projects /></PageWrapper>} />
+            <Route path="/work-experience" element={<PageWrapper><WorkExperience /></PageWrapper>} />
+            <Route path="/resume" element={<PageWrapper><Resume /></PageWrapper>} />
+            <Route path="/blog" element={<PageWrapper isSurface><Blog /></PageWrapper>} />
+            <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 };
 

@@ -96,7 +96,8 @@ const WorkExperience: React.FC = () => {
                             const isRightSide = index % 2 === 0;
                             const enlargedClasses = `
                                 scale-110 
-                                md:scale-y-115 md:scale-x-175 
+                                scale-x-175
+                                md:scale-y-115
                                 ${isRightSide ? 'md:-translate-x-2/5' : 'md:translate-x-2/5'}
                             `;
 

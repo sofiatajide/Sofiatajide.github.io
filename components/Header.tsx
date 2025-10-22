@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { Section } from '../types';
 import { HomeIcon, AboutIcon, ProjectsIcon, ResumeIcon, BlogIcon, ContactIcon, WorkExperienceIcon } from './Icons';
-
-interface HeaderProps {
-  activeSection: Section;
-  setActiveSection: (section: Section) => void;
-}
 
 const sectionIcons: Record<Section, React.ReactNode> = {
   Home: <HomeIcon />,
@@ -17,57 +13,53 @@ const sectionIcons: Record<Section, React.ReactNode> = {
   Contact: <ContactIcon />,
 };
 
-const NavButton: React.FC<{
-  sectionName: Section;
-  activeSection: Section;
-  onClick: (section: Section) => void;
-  children: React.ReactNode;
-}> = ({ sectionName, activeSection, onClick, children }) => (
-  <button
-    onClick={() => onClick(sectionName)}
-    className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 relative bg-transparent border-none cursor-pointer ${
-      activeSection === sectionName
-        ? 'text-primary'
-        : 'text-on-surface-secondary hover:text-on-surface'
-    }`}
-  >
-    {sectionIcons[sectionName]}
-    <span>{children}</span>
-    {activeSection === sectionName && (
-      <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"></span>
-    )}
-  </button>
-);
+const sectionPaths: Record<Section, string> = {
+    Home: '/',
+    About: '/about',
+    Projects: '/projects',
+    'Work Experience': '/work-experience',
+    Resume: '/resume',
+    Blog: '/blog',
+    Contact: '/contact',
+}
 
-const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
+const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const sections: Section[] = ['About', 'Projects', 'Work Experience', 'Resume', 'Blog', 'Contact'];
-
-  const handleNavClick = (section: Section) => {
-    setActiveSection(section);
-    setIsMenuOpen(false);
-  };
 
   return (
     <header className="bg-surface/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-             <button onClick={() => handleNavClick('Home')} className="text-xl font-bold text-on-surface tracking-wider bg-transparent border-none cursor-pointer">
+             <NavLink to="/" className="text-xl font-bold text-on-surface tracking-wider bg-transparent border-none cursor-pointer">
               SOFIAT AJIDE
-            </button>
+            </NavLink>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {sections.map((section) => (
-                <NavButton
+                <NavLink
                   key={section}
-                  sectionName={section}
-                  activeSection={activeSection}
-                  onClick={handleNavClick}
+                  to={sectionPaths[section]}
+                  className={({ isActive }) =>
+                    `flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 relative bg-transparent border-none cursor-pointer ${
+                      isActive
+                        ? 'text-primary'
+                        : 'text-on-surface-secondary hover:text-on-surface'
+                    }`
+                  }
                 >
-                  {section}
-                </NavButton>
+                  {({ isActive }) => (
+                      <>
+                        {sectionIcons[section]}
+                        <span>{section}</span>
+                        {isActive && (
+                          <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"></span>
+                        )}
+                      </>
+                  )}
+                </NavLink>
               ))}
             </div>
           </div>
@@ -96,18 +88,21 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
         <div className="md:hidden" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {sections.map((section) => (
-               <button
+               <NavLink
                 key={section}
-                onClick={() => handleNavClick(section)}
-                className={`flex items-center gap-3 w-full text-left px-3 py-2 rounded-md text-base font-medium ${
-                  activeSection === section
-                    ? 'bg-primary text-white'
-                    : 'text-on-surface-secondary hover:text-on-surface hover:bg-slate-700'
-                }`}
+                to={sectionPaths[section]}
+                onClick={() => setIsMenuOpen(false)}
+                className={({ isActive }) =>
+                  `flex items-center gap-3 w-full text-left px-3 py-2 rounded-md text-base font-medium ${
+                    isActive
+                      ? 'bg-primary text-white'
+                      : 'text-on-surface-secondary hover:text-on-surface hover:bg-slate-700'
+                  }`
+                }
               >
                 {sectionIcons[section]}
                 <span>{section}</span>
-              </button>
+              </NavLink>
             ))}
           </div>
         </div>

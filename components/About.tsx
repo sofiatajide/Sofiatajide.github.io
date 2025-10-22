@@ -32,11 +32,11 @@ const certifications = [
   { name: 'IBM Data Science', url: 'https://coursera.org/share/3f5429694eee99aaa13f89048557a523' },
   { name: 'Johns Hopkins Data Science', url: 'https://coursera.org/share/01fc7a3806488b3f82b47c12f73c0f32' },
   { name: 'IBM Data Analyst', url: 'https://coursera.org/share/f4124ad68fb5f6ebd8b24c27f0caf624' },
-  { name: 'Google Project Management', url: '/certificates/google-project-management.pdf' },
-  { name: 'McKinsey Forward Program', url: '/certificates/mckinsey-forward-program.pdf' },
-  { name: 'BCG Strategy Consulting', url: '/certificates/bcg-strategy-consulting.pdf' },
-  { name: 'Data Science Bootcamp' },
-  { name: 'Accenture Program' },
+  { name: 'Google Project Management', url: '/images/Google BA.jpg' },
+  { name: 'McKinsey Forward Program', url: '/images/McKinsey_Forward_Program_Badge.pdf' },
+  { name: 'BCG Strategy Consulting', url: '/images/BCG.jpg' },
+  { name: 'Data Science Bootcamp', url: '/images/DataScienceBootcamp.jpg' },
+  { name: 'Accenture Program', url: '/images/Accen.jpg' },
   { name: 'PMP (in progress)' },
 ];
 
@@ -47,7 +47,7 @@ const About: React.FC = () => {
       <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
         <div className="w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
           <img
-            src="https://picsum.photos/seed/profile/400/400"
+            src="/images/sofiat.jpg"
             alt="Sofiat Ajide"
             className="rounded-full object-cover w-full h-full border-4 border-surface shadow-lg"
           />
